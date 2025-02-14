@@ -100,8 +100,6 @@ std::string dump_method(Il2CppClass *klass) {
         //TODO attribute
         if (method->methodPointer) {
             outPut << "\t//                      ";
-            outPut << std::hex << (uint64_t) method->methodPointer - il2cpp_base;
-            outPut << "";
             outPut << std::hex << (uint64_t) method->methodPointer;
         } else {
             outPut << "\t// RVA: 0x VA: 0x0";

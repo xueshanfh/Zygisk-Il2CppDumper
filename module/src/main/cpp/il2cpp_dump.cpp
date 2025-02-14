@@ -99,9 +99,9 @@ std::string dump_method(Il2CppClass *klass) {
     while (auto method = il2cpp_class_get_methods(klass, &iter)) {
         //TODO attribute
         if (method->methodPointer) {
-            outPut << "\t// RVA: 0x";
+            outPut << "\t//                      ";
             outPut << std::hex << (uint64_t) method->methodPointer - il2cpp_base;
-            outPut << " VA: 0x";
+            outPut << "";
             outPut << std::hex << (uint64_t) method->methodPointer;
         } else {
             outPut << "\t// RVA: 0x VA: 0x0";
